@@ -119,7 +119,7 @@ Implementation provided by DC-SAM (`thirdparty/dcsam`)
 
 
 ### Adaptive Graduated Non-Convexity for Pose Graph Optimization (AGNC-PGO)
-'''
+```
 Choi, Seungwon, Wonseok Kang, Jiseong Chung, Jaehyun Kim, and Tae-wan Kim. "Adaptive Graduated Non-Convexity for Pose Graph Optimization." arXiv preprint arXiv:2308.11444 (2023).
-'''
-Our prior work. Provided with mode 1, 2
+```
+Our prior work. Provided with modes 1, 2
