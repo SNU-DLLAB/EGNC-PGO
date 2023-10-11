@@ -50,17 +50,28 @@ The following is an example work-flow to play with EGNC-PGO and the prior works 
 * Now lets run EGNC-PGO
     * `../build/experiments/run-experiment -i ~/<some-path>/EGNC-PGO_test_environment/datasets/10/CSAIL_10_random_0.irl -o ~/<some-path>/EGNC-PGO_test_environment/results/ -m risam -n 1 -d 3`
 * We should now see a directory in results like `results/CSAIL_10_random_0_risam_YYYY-MM-DD_HH-MM-SS`
-* You can run prior works bu changing the `-m` ("method") option
+* You can run prior works by changing the `-m` ("method") option
 * You can run riSAM by using `-m risam -d 0` option
 * You can run AGNC-PGO by using `-m risam -d 1`, or `-m risam -d 2` option
 * You can run EGNC-PGO by using `-m risam -d 3` option
 
 ### 3. Plot our results
 * Lets visualize the results
-    * `./scripts/plot-traj -i ~/<some-path>/EGNC-PGO_test_environment/datasets/10/CSAIL_10_random_0.irl -r ~/<some-path>/EGNC-PGO_test_environment/results/CSAIL_10_random_0_risam_2023-03-09_14-28-37/ --legend`
+    * `./scripts/plot-traj -i ~/<some-path>/EGNC-PGO_test_environment/datasets/10/CSAIL_10_random_0.irl -r ~/<some-path>/EGNC-PGO_test_environment/results/CSAIL_10_random_0_risam_YYYY-MM-DD_HH-MM-SS/ --legend`
 * You should see a plot of the final solution and print outs of the trajectory.
 * Further, lets animate the trajectory so we can see all the incremental steps
-    * `./scripts/animate-traj -i ~/<some-path>/EGNC-PGO_test_environment/datasets/10/CSAIL_10_random_0.irl -r ~/<some-path>/EGNC-PGO_test_environment/results/CSAIL_10_random_0_risam_2023-03-09_14-28-37/iterations/`
+    * `./scripts/animate-traj -i ~/<some-path>/EGNC-PGO_test_environment/datasets/10/CSAIL_10_random_0.irl -r ~/<some-path>/EGNC-PGO_test_environment/results/CSAIL_10_random_0_risam_YYYY-MM-DD_HH-MM-SS/iterations/`
+
+## Reproduction of the experimental results of the paper
+* We provide the dataset used in experimental results of our paper, shown in Fig. 6.
+* To reproduce the result, follow the steps:
+   * First, make a directory to save the results
+      * `mkdir ~/<some-path>/EGNC-PGO_test_environment/results`
+   * Then, run EGNC-PGO
+      * `../build/experiments/run-experiment -i ./datasets/manhattan_noisy/manhattan_noisy.irl -o ~/<some-path>/EGNC-PGO_test_environment/results/ -m risam -n 1 -d 3`
+      * You can run prior works by changing the `-m` ("method") option
+   * Lets visualize the results
+      * `./scripts/plot-traj -i ~/<some-path>/EGNC-PGO/experiments/datasets/manhattan_noisy/manhattan_noisy.irl -r ~/<some-path>/EGNC-PGO_test_environment/results/manhattan_noisy_0_random_0_risam_YYYY-MM-DD_HH-MM-SS/ --legend`
 
 # Prior Works
 
