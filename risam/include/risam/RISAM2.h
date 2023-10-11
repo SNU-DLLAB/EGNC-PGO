@@ -166,6 +166,9 @@ class RISAM2 : public ISAM2 {
   Point interpolate(const Point& p1, const Point& p2, double t);
   std::vector<Point> getInterpolatedControlPoints(double t);
 
+  double partial_derivative(double mu, double r, int c);
+  double bisection(double a, double b, double tol, double r, int dim);
+
   /// @brief Constructor
   RISAM2(RISAM2Params params) : ISAM2(params.isam2_params), risam_params_(params) {}
   /// @brief Mode setting function
