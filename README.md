@@ -1,6 +1,6 @@
 # Efficient Graduated Non-Convexity for Pose Graph Optimization (EGNC-PGO)
 
-(Paper arXiv link)[https://arxiv.org/abs/2310.06765]
+[Paper arXiv link](https://arxiv.org/abs/2310.06765)
 
 <p align="center">
 <img src="media/result.png"
